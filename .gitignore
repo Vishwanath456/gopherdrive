@@ -1,0 +1,17 @@
+# Go
+bin/
+*.exe
+*.test
+*.out
+
+# OS
+.DS_Store
+
+# IDE
+.vscode/
+
+# Data folder
+data/
+
+# Logs
+*.log

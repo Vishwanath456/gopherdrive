@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GopherDrive Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+    <h1>🚀 GopherDrive</h1>
+    <p>High-Concurrency Metadata Processing System</p>
+</div>
+
+<div class="cards">
+    <div class="card">
+        <h3>Total Files</h3>
+        <p id="totalFiles">0</p>
+    </div>
+    <div class="card">
+        <h3>Completed</h3>
+        <p id="completedCount">0</p>
+    </div>
+    <div class="card">
+        <h3>Processing</h3>
+        <p id="processingCount">0</p>
+    </div>
+    <div class="card">
+        <h3>System Health</h3>
+        <p id="healthStatus">Checking...</p>
+    </div>
+</div>
+
+<h2>📁 File Metadata</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Status</th>
+            <th>Size</th>
+            <th>Extension</th>
+            <th>SHA256</th>
+        </tr>
+    </thead>
+    <tbody id="fileTable"></tbody>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>

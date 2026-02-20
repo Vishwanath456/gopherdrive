@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "gopherdrive/proto";
+
+service MetadataService {
+  rpc RegisterFile (RegisterRequest) returns (RegisterResponse);
+  rpc UpdateStatus (UpdateRequest) returns (UpdateResponse);
+  rpc GetFile (GetRequest) returns (GetResponse);
+}
+
+message RegisterRequest {
+  string id = 1;
+  string filename = 2;
+  string filepath = 3;
+}
+
+message RegisterResponse {
+  string message = 1;
+}
+
+message UpdateRequest {
+  string id = 1;
+  string sha256 = 2;
+  int64 size = 3;
+  string extension = 4;
+  string status = 5;
+}
+
+message UpdateResponse {
+  string message = 1;
+}
+
+message GetRequest {
+  string id = 1;
+}
+
+message GetResponse {
+  string id = 1;
+  string filepath = 2;
+  string status = 3;
+}
